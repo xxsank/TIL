@@ -63,22 +63,22 @@
     느낌대로 float 레이아웃은 이미지나 콘텐츠등을 띄우는 느낌을(?) 강하게 준다. 부모를 기준으로 left 또는 right에 배치 시킬수 있으며, 주변 콘텐츠의 배치에도 영향을 미친다. float인 element는 부모의 element에 영향을 주지 않는다. 다단 컬럼 형태의 css 레이아웃을 위하여 반드시 요구되는 속성.
     
     - float된 자식 element의 높이를 부모 element에 반영하도록 대응 하는 방법
-      
+    <p></p>
     1. float에 float으로 대응하는 방법
 
-    ![inline](./images/float2.jpg)
+    ![inline](./images/float2.png)
 
     2. float에 overflow 속성으로 대응하는 방법
 
-    ![inline](./images/float3.jpg)
+    ![inline](./images/float3.png)
 
     3. float을 빈 엘리먼트로 clear 하는 방법
 
-    ![inline](./images/float4.jpg)
+    ![inline](./images/float4.png)
 
     4. float을 가상 선택자 :after로 clear 하는 방법
 
-    ![inline](./images/float5.jpg)
+    ![inline](./images/float5.png)
 
     
     
@@ -86,6 +86,7 @@
 
 
 ## 2. Today I found out
-  -  
+  - 오늘 주요 학습내용은 float 레이아웃의 특성을 이해하는 것과 float 속성을 사용했을때 일어나는 이벤트를 처리하는 방법 네가지를 배웠다. 박스의 기본 속성들은 어느정도 감히 잡히지만 여전히 레이아웃의 속성은 어렵다 실제로 있는 간단한 웹페이지부터 시작해서 보고 따라 구성해보는 연습이 많이 필요할거같다.   
 
-## 3. 참고
+## 3. Ref
+ - [NARADESIGN](http://naradesign.net/wp/)
