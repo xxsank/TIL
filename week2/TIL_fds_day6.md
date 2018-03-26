@@ -66,19 +66,19 @@
     <p></p>
     1. float에 float으로 대응하는 방법
 
-    ![inline](./images/float2.png)
+    ![inline](images/float2.png)
 
     2. float에 overflow 속성으로 대응하는 방법
 
-    ![inline](./images/float3.png)
+    ![inline](images/float3.png)
 
     3. float을 빈 엘리먼트로 clear 하는 방법
 
-    ![inline](./images/float4.png)
+    ![inline](images/float4.png)
 
     4. float을 가상 선택자 :after로 clear 하는 방법
 
-    ![inline](./images/float5.png)
+    ![inline](images/float5.png)
 
     
     
