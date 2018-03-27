@@ -53,7 +53,7 @@
 
    - gird layout은 세로 열과 가로 행을 기준으로 요소를 정렬 할 수 있다. 웹사이트의 일정 수의 grid로 나누고 그 각각의 grid 속에 필요한 디자인 요소를 적절하게 배치하는 방법.
 
-     ![inline](images/grid_layout.PNG)
+     ![inline](images/grid_layout.png)
     
     -  ex)
         ```css 
