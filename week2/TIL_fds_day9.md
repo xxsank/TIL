@@ -3,6 +3,61 @@
 ## 1. Today I learned
 
 ### 1-1. html/css
+ - background
+   - `background` : `background` 속성은 태그의 배경을 지정하는 속성으로, `font` 속성과 비슷하게 세부적인 속성을 한번에 쓸 수 있는 속성이다. 배경은 기본적으로 요소박스 크기만큼 나타내며 repat된다.
+   
+   - `background` 문법 
+       ```css
+        /* background-image background-position [/background-size] repeat-style attachement box background-color */
+         h1 {background: url('img.gif') 50% /8em repeat-x fixed border-box blue; }
+       ```
+       축약형 속성으로 background-color, background-position, background-size, background-repeat, background-attachment, and background-image 순서로 작성한다. 몇몇 값을 생략해도 문제없다.
+
+       `background-color` : 배경 색상을 지정하며, 16진수의 컬러 값(#ffffff) 또는 rgb, 키워드 값을 받는다. 그 외로 transparent(기본값이므로 투명), inherit(부모 요소로부터 상속 값을 받음)가 있다.
+       
+       `background-image` : 배경 이미지를 설정하며, 주로 이미지 경로를 지정하는 방식으로 사용된다. 경로는  `background-image: url("이미지 경로")`처럼 작성한다. 컨테이너의 크기와 상관없이 삽입된 `background-image` 의 크기는 컨테이너에 맞춰 늘어나거나 줄어들지 않고 그대로 표시되며 이미지 보다 컨테이너가 더 크다면 이미지는 반복되어 표시되게 한다.
+
+       `background-position` : 일반적으로 `background-image` 는 왼쪽 위부터 출력하는데 이 속성을 사용하게 된다면 이미지의 좌표를 수정 할 수 있게 된다.
+       ```
+        - left top / left center / left bottom / right top / right center / right bottom / center top / center center / center bottom : 키워드 속성값이고 하나만 지정하면 두 번째 값은 center가 된다.
+        
+        - x% y% : 퍼센트 부호(%)가 뒤에 오는 정수를 지정한다.
+        
+        - xpos ypos : px를 포함해서 in, cm, mm, em, ex, pt, 
+        pc등을 사용할 수 있다.
+        
+        - inherit : 부모 요소로부터 값을 상속 받는다.
+       ```
+
+       `background-size` : CSS3에 추가된 속성으로 배경 이미지의 크기(너비,높이)를 조절하는 속성이다.
+       ```
+        - auto : 기본값으로 배경 이미지의 원래 width,height 그대로 표시
+        
+        - 길이 : px,cm 등의 단위로 배경 이미지의 width,height를 설정
+
+        - % : 너비와 높이를 부모 요소에 비례한 % 값으로 지정한다
+
+        - contain : 너비와 높이가 내용 안쪽에 알맞은 방식으로 이미지를 가장 크게 조절 함
+
+        - initial : 기본값으로 초기화 하며, 상속은 되지 않는다
+       ```
+
+       `background-repeat` : 배경 이미지의 반복 여부를 결정.
+       ```
+        - repeat : 배경이 수평 및 수직 방향으로 반복된다.
+
+        - repeat-x : 배경이 수평 방향으로 반복된다.
+
+        - repeat-y : 배경이 수직 방향으로 반복된다.
+
+        - no-repeat : 배경이 반복되지 않는다.
+
+        - round : 배경 영역을 채우기 위해 필요한 만큼 반복된다.
+
+        - inherit : 부모 요소로부터 값을 상속받는다.
+       ```
+
+
  - font
 
    - `line-height` : 블록 엘리먼트에서, `line-height`는 텍스트를  싸고 있는 기본라인의 높이를 설정하는 속성을 뜻한다.
@@ -153,3 +208,4 @@
 
 ## 3. Ref
  - [Animate.css](https://daneden.github.io/animate.css/)
+ - [WEBDIR](http://webdir.tistory.com/340)
