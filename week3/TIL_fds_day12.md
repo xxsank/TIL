@@ -56,7 +56,7 @@
         white-space: normal;
         }
         ```
-        ![inline](/week3/images/normal.png) 
+        ![inline](/week3/images/normal.PNG) 
       
       - white-space:nowrap
         ```css
@@ -64,7 +64,7 @@
         white-space: nowrap;
         }
         ```
-        ![inline](/week3/images/nowrap.png) 
+        ![inline](/week3/images/nowrap.PNG) 
 
       - white-space:pre
         ```css
@@ -72,7 +72,7 @@
         white-space: pre;
         }
         ```
-        ![inline](/week3/images/pre.png) 
+        ![inline](/week3/images/pre.PNG) 
 
       - white-space:pre-line
         ```css
@@ -80,7 +80,7 @@
         white-space: pre-line;
         }
         ```
-        ![inline](/week3/images/pre-line.png) 
+        ![inline](/week3/images/pre-line.PNG) 
 
       - white-space:pre-wrap
         ```css
@@ -88,7 +88,7 @@
         white-space: pre-wrap;
         }
         ```
-        ![inline](/week3/images/pre-wrap.png) 
+        ![inline](/week3/images/pre-wrap.PNG) 
 
 #### 1-1-4 text-overflow 속성
   - text-overflow
@@ -116,7 +116,7 @@
         text-overflow: clip;
         }
         ```
-        ![inline](/week3/images/clip.png) 
+        ![inline](/week3/images/clip.PNG) 
 
        - text-overflow: ellipsis
          ```css
@@ -126,7 +126,7 @@
          text-overflow: ellipsis;
          }
          ```
-          ![inline](/week3/images/ellipsis.png) 
+          ![inline](/week3/images/ellipsis.PNG) 
 
 
 ## 2. Today I found out
