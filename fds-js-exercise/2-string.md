@@ -337,13 +337,71 @@ function maxLength(str){
 
 문자열 `s`과 자연수 `n`을 입력받아, `s`의 첫 `n`개의 문자만으로 이루어진 새 문자열을 반환하는 함수를 작성하세요.
 
+- 정답
+
+  ```js
+  function firstStr(s,n){
+  let val = '';
+  for(let i = 0; i<s.length;i++){
+    if(i === n){
+      val = s.slice(0,i);
+    }
+  }
+  return val;
+  }
+  ```
+- 힌트
+  // slice
+  // filter join
+
 ### 문제 13
 
 Camel case의 문자열을 입력받아, snake case로 바꾼 새 문자열을 반환하는 함수를 작성하세요.
 
+- 정답
+
+  ```js
+  function camelToSnake(str){
+  let snake = '';
+  
+  for(let i = 0; i<str.length; i++){
+    if(str[i].toUpperCase() === str[i]){
+      if(str[i] === str[0]){
+        snake += str[i].toLowerCase();
+      }else{
+      snake += '_' + str[i].toLowerCase();
+      }
+    }
+    else
+      snake += str[i].toLowerCase();
+  }
+  return snake;
+  }
+
+  camelToSnake('HelloWorldJavaScript');
+  ```
+
 ### 문제 14
 
 Snake case의 문자열을 입력받아, camel case로 바꾼 새 문자열을 반환하는 함수를 작성하세요.
+
+- 정답
+
+```js
+function snakeToCamel(str){
+
+  let val = '';
+  
+  
+  for(let i = 0; i<str.length; i++){
+    if(str[i] === str[0]){ val += str[i].toUpperCase(); i++}
+    if(str[i] !== '_') val += str[i];
+    else{val += str[i+1].toUpperCase(); i++;}
+  }
+  return val;
+}
+snakeToCamel('hello_world_java_script');
+```
 
 ### 문제 15
 
@@ -356,6 +414,30 @@ split('Hello World', ' '); -> ['Hello', 'World']
 split('let,const,var', ',') -> ['let', 'const', 'var']
 ```
 
+- 정답
+  
+  ```js
+  function split(str, sep){
+  const arr = [];
+  let val = '';
+
+  for(let i=0; i<str.length; i++){
+      val += str[i];
+    if(str[i] === sep){
+      // replace('찾을문자열','바꿀문자열')
+      // 바꿀문자열에 빈문자열을 넣으면 찾을문자열만 없어진다
+      val = val.replace(',','');
+      arr.push(val);
+      val = '';
+    }
+  }
+    arr.push(val);
+    return arr;
+  }
+    
+  split('let,const,var', ',');
+  ```
+
 ### 문제 16
 
 2진수를 표현하는 문자열을 입력받아, 그 문자열이 나타내는 수 타입의 값을 반환하는 함수를 작성하세요. (`parseInt`를 사용하지 말고 작성해보세요.)
@@ -365,6 +447,31 @@ split('let,const,var', ',') -> ['let', 'const', 'var']
 convertBinary('1101'); -> 13
 ```
 
+- 정답
+
+  ```js
+  function convertBinary(str){
+    // 하나씩 계산하기 위해 배열 선언
+    const arr = [...str];
+    // for문으로 2^n계산을 쉽게하기 위해 revers로 뒤집어줌
+    arr.reverse();
+    // 더한값을 저장해주기 위한 변수 선언;
+    let num = 0;
+    
+    for(let i=0; i<arr.length;i++){
+      if(arr[i] === '0'){
+        num += 0;
+      }
+      else{
+        num += 2**i;
+      }
+    }
+    return num;
+  }
+
+  convertBinary('1111');
+  ```
+
 ### 문제 17
 
 숫자로만 이루어진 문자열을 입력받아, 연속된 두 짝수 사이에 하이픈(-)을 끼워넣은 문자열을 반환하는 함수를 작성하세요.
@@ -373,3 +480,21 @@ convertBinary('1101'); -> 13
 ```
 insertHyphen('437027423'); -> '4370-274-23'
 ```
+
+- 정답
+
+  ```js
+  function insertHyphen(num){
+    let number = '';
+    
+    for(let i=0; i<num.length; i++){
+      number += num[i];
+      if((num[i]%2 === 0) && (num[i+1]%2 === 0)){
+        number += '-';
+      }
+    }
+    return number;
+  }
+
+  insertHyphen('437027423');
+  ```
