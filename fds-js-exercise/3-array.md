@@ -7,17 +7,92 @@
 range(3, 6); -> [3, 4, 5, 6]
 ```
 
+- 정답
+
+```js
+function range(start,end){
+  const arr = [];
+  
+  for(let i = start; i<=end; i++){
+    arr.push(i);
+  }
+  return arr;
+  }
+  range(3,6);
+```
+
 ### 문제 2
 
 수 타입의 값으로만 이루어진 배열을 입력받아, 그 값들의 합을 구하는 함수를 작성하세요.
+
+- 정답
+
+  ```js
+  function sum(arr){
+    let num = 0;
+    for(let i =0; i<arr.length; i++){
+      num += arr[i]  
+    }
+    return num;
+  }
+  
+  //forEach 구문
+  function sum(arr){
+  let num = 0;
+  arr.forEach(item => {
+    num += item;
+  })
+    return num;
+  }
+
+  //for .. of 구문
+  function sum(arr){
+    let num=0;
+    for(const item of arr){
+      num += item;
+    }
+    return num;
+  }
+  ```
 
 ### 문제 3
 
 배열을 입력받아, falsy인 요소가 제거된 새 배열을 반환하는 함수를 작성하세요.
 
+- 정답 
+
+  ```js
+  function toArray(truthy){
+    let array = [];
+    
+    for(let i=0; i<truthy.length; i++){
+      if(truthy[i] !== false && truthy[i] !== null && truthy[i] !== undefined && truthy[i] !== 0 && !Number.isNaN(truthy) && truthy[i] !== ''){
+        array.push(truthy[i]);
+      }
+    }
+    return array;
+  }
+
+  toArray([1,false,null,0,2,'',3,'asdf']);
+  ```
+
 ### 문제 4
 
 배열을 입력받아, 중복된 요소가 제거된 새 배열을 반환하는 함수를 작성하세요.
+
+- 정답
+
+  ```js
+  function overlapRemove(array) {
+	let newArr = [];
+	for (let item of array) {
+		if (!newArr.includes(item)) newArr.push(item);
+	}
+	return newArr;
+  }
+  overlapRemove([1, 2, 2, 3, 1, 4, 4]);
+  ```
+
 
 ### 문제 5
 
@@ -55,6 +130,49 @@ coins(263, [100, 50, 10, 5, 1]);
 1
 1
 ```
+
+- 정답
+  ```js
+  // 지극히 예제만 돌아가게 작성했고 위예시와 다른출력을 하게 했습니다..... 더 이상은 naver..
+  function changeCoin(num,array){
+  let leftMoney = 0;
+  
+  let hundredCoin = 0;
+  let fiftyCoin = 0;
+  let tenCoin = 0;
+  let fievCoin = 0;
+  let oneCoin = 0;
+  
+  for(let i=0; i<array.length; i++){
+    if(array[i] === 100){
+      hundredCoin = Math.trunc(num / 100);
+      leftMoney = num % 100;
+    }
+    if(array[i] === 50){
+      fiftyCoin = Math.trunc(leftMoney / 50);
+      leftMoney = leftMoney % 50;
+    }
+    if(array[i] === 10){
+      tenCoin = Math.trunc(leftMoney / 10);
+      leftMoney = leftMoney % 10;
+    }
+    if(array[i] === 5){
+      fiveCoin = Math.trunc(leftMoney / 5);
+      leftMoney = num % 5;
+    }
+    if(array[i] === 1){
+      oneCoin =  Math.trunc(leftMoney / 1);
+    }
+  }
+  
+  
+  return console.log(`100원 : ${hundredCoin/1}개 \n50원 : ${fiftyCoin}개\n10원 : ${tenCoin}개\n5원 : ${fiveCoin}개\n1원 : ${oneCoin}개`);
+  }
+
+  changeCoin(263,[100,50,10,5,1]);
+  ```
+
+
 
 ### 문제 8
 
