@@ -350,6 +350,26 @@ function maxLength(str){
   return val;
   }
   ```
+
+  ```js
+  function firstStr(s,n){
+  let val = '';
+  for(let i = 0; i<s.length && i<n ;i++){
+    val += s[i]
+  }
+  return val;
+  }
+  ```
+
+  ```js
+  function firstStr(s,n){
+   return  Array
+    .from(s)
+    .filter((item,index) => index < n)
+    .join('');
+  }
+  ```
+
 - 힌트
   // slice
   // filter join
@@ -379,6 +399,12 @@ Camel case의 문자열을 입력받아, snake case로 바꾼 새 문자열을 �
   }
 
   camelToSnake('HelloWorldJavaScript');
+  ```
+
+  ```js
+  function camelToSnake(str){
+  return str.replace(/([A-Z])/g, match => '_' + match[0].toLowerCase());
+  }
   ```
 
 ### 문제 14
@@ -438,6 +464,25 @@ split('let,const,var', ',') -> ['let', 'const', 'var']
   split('let,const,var', ',');
   ```
 
+  ```js
+  function split(str, sep){
+  const arr = [];
+  let currentWord = '';
+  for(let i=0; i<str.length; i++){
+    if(str[i] === sep){
+      arr.push(currentWord);
+      currentWord = '';
+    } else{
+        currentWord += str[i];
+    }
+  }
+  arr.push(currentWord);
+  return arr;
+  }
+
+  split('let,const,var',',')
+```
+
 ### 문제 16
 
 2진수를 표현하는 문자열을 입력받아, 그 문자열이 나타내는 수 타입의 값을 반환하는 함수를 작성하세요. (`parseInt`를 사용하지 말고 작성해보세요.)
@@ -457,7 +502,7 @@ convertBinary('1101'); -> 13
     arr.reverse();
     // 더한값을 저장해주기 위한 변수 선언;
     let num = 0;
-    
+  
     for(let i=0; i<arr.length;i++){
       if(arr[i] === '0'){
         num += 0;
@@ -470,6 +515,18 @@ convertBinary('1101'); -> 13
   }
 
   convertBinary('1111');
+  ```
+
+  ```js
+  function convertBinary(str){
+  let num = 0;
+  for(let i=0; i<str.length; i++){
+    if(str[str.length - i - 1] === '1'){
+      num += 2 ** i;
+    }
+  }
+  return num;
+  }
   ```
 
 ### 문제 17

@@ -66,7 +66,7 @@ function range(start,end){
     let array = [];
     
     for(let i=0; i<truthy.length; i++){
-      if(truthy[i] !== false && truthy[i] !== null && truthy[i] !== undefined && truthy[i] !== 0 && !Number.isNaN(truthy) && truthy[i] !== ''){
+      if(truthy[i] ){
         array.push(truthy[i]);
       }
     }
@@ -133,7 +133,7 @@ coins(263, [100, 50, 10, 5, 1]);
 
 - 정답
   ```js
-  // 지극히 예제만 돌아가게 작성했고 위예시와 다른출력을 하게 했습니다..... 더 이상은 naver..
+
   function changeCoin(num,array){
   let leftMoney = 0;
   
@@ -172,7 +172,22 @@ coins(263, [100, 50, 10, 5, 1]);
   changeCoin(263,[100,50,10,5,1]);
   ```
 
+  ```js
+  function coins(money,coinTypes){
+  let currentMoney = money;
+  let coinIndex = 0;
+  while(currentMoney > 0){
+    if(currentMoney - coinTypes[coinIndex] >= 0 ){
+    console.log(coinTypes[coinIndex]);
+    currentMoney -= coinTypes[coinIndex];
+    } else{
+      coinIndex++;
+    }
+  }
+  }
 
+  coins(263,[100,50,10,5,1])
+  ```
 
 ### 문제 8
 
