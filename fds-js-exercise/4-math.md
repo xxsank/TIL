@@ -2,6 +2,14 @@
 
 양수를 입력받아 이 수를 반지름으로 하는 원의 넓이를 반환하는 함수를 작성하세요.
 
+```js
+ function circleArea(num){
+    return (Math.PI * (num * num));
+ }
+ 
+ circleArea(10);
+```
+
 ### 문제 2
 
 두 정수 `min`, `max` 를 입력받아, `min` 이상 `max` 미만인 임의의 정수를 반환하는 함수를 작성하세요.
