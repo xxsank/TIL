@@ -14,6 +14,14 @@
 
 두 정수 `min`, `max` 를 입력받아, `min` 이상 `max` 미만인 임의의 정수를 반환하는 함수를 작성하세요.
 
+```js
+function compareInt(min,max){
+    return Math.floor(Math.random() * (max - min)) ;
+}
+
+compareInt(0,9)
+```
+
 ### 문제 3
 
 정수를 입력받아, 5 단위로 올림한 수를 반환하는 함수를 작성하세요.
