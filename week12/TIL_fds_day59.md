@@ -136,7 +136,7 @@
 - **제어되는 컴포넌트**
   - HTML에서 `<input>`, `<textarea>`, `<select>` 같은 form 요소는 자기만의 상태를 가지고 사용자의 입력에 따라 업데이트됩니다. 반면에 React에서는, 변경 가능한 상태를 일반적으로 컴포넌트의 state 속성에 위치시키며, 이는 `setState()`로만 업데이트할 수 있습니다.
 
-  - React state를 “진리의 유일한 원천 (single source of truth)“으로 만들어 두 세계를 결합할 수 있습니다. 이렇게 하면 사용자의 입력에 따라 폼에서 발생되는 일을 React 컴포넌트 측에서 제어하게 됩니다. 이런 방식으로, React에 의해 제어되는 input 폼 요소를 **제어되는 컴포넌트** 라고 부릅니다.
+  - React state를 `진리의 유일한 원천 (single source of truth)`으로 만들어 두 세계를 결합할 수 있습니다. 이렇게 하면 사용자의 입력에 따라 폼에서 발생되는 일을 React 컴포넌트 측에서 제어하게 됩니다. 이런 방식으로, React에 의해 제어되는 input 폼 요소를 **제어되는 컴포넌트** 라고 부릅니다.
 
   ```js
   class NameForm extends React.Component {
@@ -222,3 +222,11 @@
     - React에서 `<textarea>` 는 대신 value 어트리뷰트를 사용합니다. 이렇게 하면 `<textarea>` 를 사용하는 폼은 한 줄 짜리 입력 필드와 매우 유사하게 작성할 수 있습니다.
     
     - `this.state.value` 를 생성자 함수에서 초기화하기 때문에, 텍스트를 가진 채로 textarea를 표시해줄 수 있습니다.
+
+
+
+
+
+
+#### State 끌어올리기
+- 
